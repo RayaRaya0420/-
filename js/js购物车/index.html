@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<table id="cartTable">
+    <thead>
+        <tr>
+            <th><label><input type="checkbox" class="check-all check">&nbsp;全选</label></th>
+            <th>商&nbsp;&nbsp;品</th>
+            <th>单&nbsp;&nbsp;价</th>
+            <th>数&nbsp;&nbsp;量</th>
+            <th>小&nbsp;&nbsp;计</th>
+            <th>操&nbsp;&nbsp;作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+            <td class="goods"><img src="images/1.jpg" alt=""><span class="fr">Casio/卡西欧 EX-TR350</span></td>
+            <td class="price">5999.88</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"><span class="add">+</span></td>
+            <td class="subtotal">5889.88</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+            <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+            <td class="goods"><img src="images/2.jpg" alt=""><span class="fr">Canon/佳能 PowerShot SX50 HS</span></td>
+            <td class="price">6835.28</td>
+            <td class="count"><span class="reduce">
+            </span><input class="count-input" type="text" value="1"><span class="add">+</span></td>
+            <td class="subtotal">6835.28</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+            <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+            <td class="goods"><img src="images/3.jpg" alt=""><span class="fr">Sony/索尼 DSC-WX300</span></td>
+            <td class="price">7500</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"><span class="add">+</span></td>
+            <td class="subtotal">7500</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+            <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+            <td class="goods"><img src="images/4.jpg" alt=""><span class="fr">Fujifilm/富士 instax mini 25</span></td>
+            <td class="price">8000</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"><span class="add">+</span></td>
+            <td class="subtotal">8000</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+            <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+            <td class="goods"><img src="images/5.jpg" alt=""><span class="fr">Fujifilm/富士 mini 90</span></td>
+            <td class="price">5000</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"><span class="add">+</span></td>
+            <td class="subtotal">5000</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+            <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+            <td class="goods"><img src="images/6.jpg" alt=""><span class="fr">Fujifilm/富士 XT1</span></td>
+            <td class="price">5000</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"><span class="add">+</span></td>
+            <td class="subtotal">5000</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        <tr>
+            <td class="checkbox"><input type="checkbox" class="check-one check"></td>
+            <td class="goods"><img src="images/7.jpg" alt=""><span class="fr">Canon/佳能 HF R26</span></td>
+            <td class="price">58512.88</td>
+            <td class="count"><span class="reduce"></span><input class="count-input" type="text" value="1"><span class="add">+</span></td>
+            <td class="subtotal">58512.88</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="foot" id="foot">
+    <label class="fl"><input type="checkbox" class="check-all check">&nbsp;全选</label>
+    <div class="fl delete">删除</div>
+    <div class="fr closing">结 算</div>
+    <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+    <div class="fr selected">
+        已选商品<span id="selectedTotal">0</span>件
+        <span class="arrow up">︽</span>
+        <span class="arrow down">︾</span>
+    </div>
+    <div class="selected-view" id="selected">
+        <div id="selectedViewList" class="selectedViewList clearfix"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

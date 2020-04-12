@@ -1,0 +1,37 @@
+*{margin: 0;padding: 0;}	
+#box{
+	width: 790px;
+	height: 340px;
+	border: 1px solid #ccc;
+	margin: 50px auto;
+	overflow: hidden;
+	position: relative;
+}
+ul{
+	list-style: none;
+}
+ul li img{
+	width: 790px;
+	height: 340px;
+}
+div span{
+	cursor: pointer;
+	color: white;
+	width: 50px;
+	height: 100px;
+	text-align: center;
+	background: #ccc;
+	opacity: 0.5;
+	font-size: 50px;
+	line-height: 90px;
+}
+#left{
+	position: absolute;
+	top: 120px;
+	left: 0;
+}
+#right{
+	position: absolute;
+	top: 120px;
+	right: 0;
+}

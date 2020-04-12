@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#box{
+    margin: 150px;
+    width: 1200px;
+    height: 700px;
+    border: 1px solid #cccccc;
+
+}
+#min{
+    position: relative;
+    float: left;
+    width: 400px;
+    height: 400px;
+}
+b{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: blue;
+    opacity: 0.5;
+    left: 0;
+    top: 0;
+    display: none;
+}
+#max{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    float: right;
+    display: none;
+}
+#img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}

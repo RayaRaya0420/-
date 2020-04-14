@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{margin:0;padding:0}
+    #box{
+        width:300px;
+        height: 300px;
+        background:blue;
+        position: absolute;
+        left:0;
+        top:0;
+        opacity: 0.3;
+        filter:alpha(opacity:30);
+    }
+</style>
+<body>
+
+
+<div id="box"></div>
+
+
+<script src="script.js"></script>
+<script>
+
+var box =document.getElementById("box");
+
+
+box.onmouseover = function(){
+
+        animate(box,700,"left",function(){
+
+                animate(box,500,"top",function(){
+
+                    animate(box,0,"left",function(){
+
+                        animate(box,0,"top")
+
+                    })
+
+                });
+
+        });
+
+}
+
+
+
+</script>
+</body>
+</html>

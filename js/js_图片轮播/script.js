@@ -1,9 +1,9 @@
-var lis = document.getElementsByTagName('li');
-var box = document.getElementById('box');
-var index = 0;
+let lis = document.getElementsByTagName('li');
+let box = document.getElementById('box');
+let index = 0;
 
 time = setInterval(function(){
-	for (var i = 0; i < lis.length; i++) {
+	for (let i = 0; i < lis.length; i++) {
 		lis[i].style.display='none';
 	}
 

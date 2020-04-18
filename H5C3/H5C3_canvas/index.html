@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="canv"></canvas>
+
+<script>
+    var canv = document.getElementById("canv");
+    canv.width=1000;
+    canv.height=700;
+
+    var cvs = canv.getContext("2d");
+
+    cvs.arc(500,300,300,0,2*Math.PI,true);
+    cvs.fillStyle="#000";
+    cvs.fill();
+    cvs.strokeStyle="#ccc";
+    cvs.stroke();
+
+    cvs.beginPath();
+    cvs.arc(500,300,300,1.5*Math.PI,0.5*Math.PI,false);
+    cvs.fillStyle="white";
+    cvs.fill();
+
+    cvs.beginPath();
+    cvs.arc(500,150,150,1.5*Math.PI,0.5*Math.PI,true);
+    cvs.fillStyle="white";
+    cvs.fill();
+
+    cvs.beginPath();
+    cvs.arc(500,450,150,1.5*Math.PI,0.5*Math.PI,false);
+    cvs.fillStyle="black";
+    cvs.fill();
+
+    cvs.beginPath();
+    cvs.arc(500,150,65,0,2*Math.PI);
+    cvs.fillStyle="black";
+    cvs.fill();
+
+    cvs.beginPath();
+    cvs.arc(500,450,65,0,2*Math.PI);
+    cvs.fillStyle="white";
+    cvs.fill();
+</script>
+</body>
+</html>

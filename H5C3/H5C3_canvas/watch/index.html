@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #myCanvas{
+            border: 1px solid #CCCCCC;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas"></canvas>
+
+<script>
+    var myCanvas = document.getElementById("myCanvas");
+    myCanvas.width = 1000;
+    myCanvas.height = 700;
+    var cvs = myCanvas.getContext("2d");
+
+    function timer(){
+        var x=210, y=210,r=200, date=new Date(), hours=date.getHours(), minutes=date.getMinutes(),
+        seconds=date.getSeconds();
+        var H=(-90 + hours*30 + minutes/2) * Math.PI/180,
+            M=(-90 + minutes*6) * Math.PI/180,
+            S=(-90 + seconds*6) * Math.PI/180;
+
+
+        cvs.arc(x,y,r,0,2*Math.PI);
+        cvs.strokeStyle="#cccccc";
+        cvs.stroke();
+        cvs.closePath();
+
+        cvs.beginPath();
+        for (var i=0;i<60;i++){
+            cvs.moveTo(x,y);
+            cvs.arc(x,y,r,i*6*Math.PI/180,(i+1)*6*Math.PI/180);
+        }
+        cvs.strokeStyle="black";
+        cvs.lineWidth=1;
+        cvs.stroke();
+        cvs.closePath();
+
+        cvs.beginPath();
+        cvs.arc(x,y,r*(19/20),0,2*Math.PI);
+        cvs.fillStyle="#ffffff";
+        cvs.fill();
+        cvs.closePath();
+
+        cvs.beginPath();
+        for (var j=0;j<12;j++){
+            cvs.moveTo(x,y);
+            cvs.arc(x,y,r,j*30*Math.PI/180,(j+1)*30*Math.PI/180);
+        }
+        cvs.lineWidth=3;
+        cvs.strokeStyle="black";
+        cvs.stroke();
+        cvs.closePath();
+
+        cvs.beginPath();
+        cvs.arc(x,y,r*(18/20),0,2*Math.PI);
+        cvs.fillStyle="#ffffff";
+        cvs.fill();
+        cvs.closePath();
+
+        //秒针
+        cvs.beginPath();
+        cvs.moveTo(x,y);
+        cvs.arc(x,y,r*(17/20),S,S);
+        cvs.lineWidth=1;
+        cvs.strokeStyle="black";
+        cvs.stroke();
+        cvs.closePath();
+
+        //分针
+        cvs.beginPath();
+        cvs.moveTo(x,y);
+        cvs.arc(x,y,r*(15/20),M,M);
+        cvs.lineWidth=3;
+        cvs.strokeStyle="black";
+        cvs.stroke();
+        cvs.closePath();
+
+        //时针
+        cvs.beginPath();
+        cvs.moveTo(x,y);
+        cvs.arc(x,y,r*(12/20),H,H);
+        cvs.lineWidth=5;
+        cvs.strokeStyle="black";
+        cvs.stroke();
+        cvs.closePath();
+    }
+    timer();
+    setInterval(timer,1000);
+
+</script>
+</body>
+</html>

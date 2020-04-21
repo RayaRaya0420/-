@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        header{
+            width: 100%;
+            padding: 20px 0;
+            background: blue;
+            color: #ffffff;
+            border-bottom: 2px solid #CCCCCC;
+            text-align: center;
+        }
+        ul li{
+            list-style: none;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>收藏</header>
+
+<div>
+    <ul>
+        <li>
+            <h2>H5C3八卦</h2>
+            <button>按钮</button>
+        </li>
+        <li>
+            <h2>H5C3折线图</h2>
+            <button>按钮</button>
+        </li>
+        <li>
+            <h2>H5C3表</h2>
+            <button>按钮</button>
+        </li>
+        <li>
+            <h2>H5C3收藏</h2>
+            <button>按钮</button>
+        </li>
+    </ul>
+    <div class="fav"></div>
+</div>
+
+<script src="jquery1.7.js"></script>
+<script>
+    $(function () {
+        if (!localStorage.getItem('fav')){
+            localStorage.setItem('fav','[]');
+        }
+
+        $("button").click(function () {
+            var txt = $(this).parent().find("h2").text(),
+                favArr = JSON.parse(localStorage.getItem('fav'));
+            console.log(txt);
+            if ( $.inArray(txt,favArr) !== -1){
+                alert("已经收藏过了");
+            }else{
+                alert("收藏成功");
+                setFav(txt);
+            }
+
+            function setFav(txt){
+                var arr = JSON.parse(localStorage.getItem('fav'));
+                arr.push(txt);
+                localStorage.setItem('fav',JSON.stringify(arr));
+            }
+
+            var arr =JSON.parse(localStorage.getItem('fav')),
+                str ='';
+            for (var i=0;i<arr.length;i++){
+                str+=arr[i]+"<br>"
+            }
+                $(".fav").html(str);
+        })
+    })
+</script>
+</body>
+</html>

@@ -10,9 +10,8 @@ function lineChart(obj,dom){
         move = [40,40],
         line = [40,height-40],
         hMove = [40,40],
-        hLine = [width-40,40],
-        lMove = [40,40],
-        lLine = [40,height-40];
+        hLine = [width-40,40];
+
 //竖线
     for (var i=0;i<xLength;i++){
         cvs.font = '21px 微软雅黑';

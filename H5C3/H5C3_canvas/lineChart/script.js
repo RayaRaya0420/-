@@ -53,8 +53,14 @@ function lineChart(obj,dom){
         for (var n=0;n<item.length;n++){
             cvs.strokeStyle=data.line[k].color;
             cvs.beginPath();
-            cvs.moveTo();
-            cvs.lineTo();
+            cvs.moveTo(40+n*stepWidth,height-(height-80)*(item[n]/data.y[data.y.length-1])-40);
+            cvs.lineTo(40+(n+1)*stepWidth,height-(height-80)*(item[n+1]/data.y[data.y.length-1])-40);
+            cvs.stroke();
+
+            cvs.beginPath();
+            cvs.arc(40+n*stepWidth,height-(height-80)*(item[n]/data.y[data.y.length-1])-40,10,0,2*Math.PI);
+            cvs.fillStyle="#ffffff";
+            cvs.fill();
             cvs.stroke();
         }
     }

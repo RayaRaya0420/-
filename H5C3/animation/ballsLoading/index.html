@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../base.css">
+    <style>
+        .loading{
+            width: 100px;
+            height: 30px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .loading>div{
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            background: #47c9af;
+            border-radius: 50px;
+            animation: loading 1s infinite;
+        }
+        @keyframes loading {
+            0%,100%{
+                transform: scale(0);
+            }
+            50%{
+                transform: scale(1);
+            }
+        }
+        .loading .item2{
+            animation-delay: -0.8s;
+        }
+        .loading .item3{
+            animation-delay: -0.6s;
+        }
+    </style>
+</head>
+<body>
+<div class="loading">
+    <div class="item1"></div>
+    <div class="item2"></div>
+    <div class="item3"></div>
+</div>
+</body>
+</html>

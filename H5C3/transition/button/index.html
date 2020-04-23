@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="base.css">
+    <style>
+        body{
+            background: #47c9af;
+            font-size: 24px;
+        }
+        .animation{
+            transition: all 0.3s;
+            display: block;
+            border: 3px solid #ffffff;
+            background: rgba(255,255,255,0.3);
+            color: #ffffff;
+            width: 300px;
+            height: 80px;
+            margin: 50px auto;
+            line-height: 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .animation:hover{
+            color: #333333;
+        }
+        .animation:after{
+            content: "";
+            width: 100%;
+            height: 0;
+            background: #ffffff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transition: all 0.3s;
+            z-index: -1;
+         }
+        .animation:hover:after{
+            height: 420%;
+        }
+        .animation.item1:after{
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+        .animation.item2:after{
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+        .animation.item3:after{
+            transform: translate(-50%,-50%);
+        }
+        .animation.item4:after{
+            transform: translate(-50%,-50%) rotate(90deg);
+        }
+        .animation.item5:after{
+            width: 0;
+            border-radius: 50%;
+            opacity: 0.5;
+            transform: translate(-50%,-50%);
+        }
+        .animation.item5:hover:after{
+            width: 110%;
+            opacity: 1;
+            height: 450%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>
+        <a href="" class="animation item1">斜45度</a>
+        <a href="" class="animation item2">斜-45度</a>
+        <a href="" class="animation item3">水平</a>
+        <a href="" class="animation item4">垂直</a>
+        <a href="" class="animation item5">中心扩散</a>
+    </p>
+</div>
+</body>
+</html>

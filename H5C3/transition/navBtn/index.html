@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #47c9af;
+            font-size: 24px;
+        }
+        nav{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 500px;
+            height: 100px;
+            margin-left: -250px;
+            margin-top: -50px;
+        }
+        nav ul{
+            list-style: none;
+
+        }
+        nav ul li{
+            display: inline-block;
+            margin: 50px;
+            text-align: center;
+            position: relative;
+        }
+        nav ul li:first-child{
+             padding-left: 0;
+         }
+        nav ul li a{
+            text-decoration: none;
+            transition: all 0.5s;
+        }
+        nav ul li a:hover{
+            color: #ffffff;
+        }
+        nav ul li a span{
+            transition: all 1s;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            margin-top: -100px;
+            margin-left: -40px;
+            border-radius: 50%;
+            background: #ffffff;
+            opacity: 0;
+        }
+
+        a:hover span{
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+        a .item1{
+            transform: rotateY(180deg);
+        }
+        a .item2{
+            transform: translateY(-30px);
+        }
+        a .item3{
+            transform: rotate3d(1,1,1,90deg);
+            transform-origin: center bottom;
+
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+
+    <ul>
+        <li>
+            <a href="">
+                Home
+                <span class='item1'></span><!--气泡-->
+            </a>
+
+        </li>
+
+        <li>
+            <a href="">
+                News
+                <span class='item2'></span><!--气泡-->
+            </a>
+
+        </li>
+
+        <li>
+            <a href="">
+                List
+                <span class='item3'></span><!--气泡-->
+            </a>
+
+        </li>
+    </ul>
+
+</nav>
+
+</body>
+</html>
